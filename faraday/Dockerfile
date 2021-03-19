@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-MAINTAINER Jorge Berrios <jorge.berrios@mastery.net>
+MAINTAINER Jorge Berrios <jxberrios@gmail.com>
 
 ARG username
 
