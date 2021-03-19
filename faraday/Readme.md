@@ -18,8 +18,14 @@ The volumes to mount should be:
 
 ### In the Docker instance:
 ```
+$ sudo apt install postgresql -y
+$ sudo sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/g" /etc/postgresql/12/main/postgresql.conf
+$ sudo service postgresql start
+$ sudo pg_ctlcluster 12 main start
+$ sudo apt install /tmp/faraday-server_amd64.deb
+$ sudo usermod -aG faraday your_username
 $ sudo faraday-manage initdb
 $ sed -i "s/bind_address \= localhost/bind_address \= 0\.0\.0\.0/g" /home/faraday/.faraday/config/server.ini
-
+$ sudo ln -s /home/faraday/.faraday /root/.faraday
 $ sudo /opt/faraday/bin/faraday-server &
 ```
