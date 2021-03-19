@@ -10,8 +10,8 @@ The volumes to mount should be:
 ```sudo docker build --build-arg username=your_username -t grav3m1nd/faraday-server:latest <local_path_to_Dockerfile>```
 
 ## Next steps after running the image:
-## Run it:
-
+### Run it:
+![image](https://user-images.githubusercontent.com/54182057/111835518-70f86e00-88cb-11eb-8d65-324721ce1ce1.png)
 
 ### Locally:
 ```ssh your_username@127.0.0.1 -p 2022```
