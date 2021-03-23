@@ -12,6 +12,8 @@ The volumes to mount should be:
 ## Next steps after running the image:
 ### Run it:
 ![image](https://user-images.githubusercontent.com/54182057/111835518-70f86e00-88cb-11eb-8d65-324721ce1ce1.png)
+#### On Linux:
+```sudo docker run -p 2022:22 -p 5985:5985 --name Faraday -d grav3m1nd/faraday-server:latest```
 
 ### Locally:
 ```ssh your_username@127.0.0.1 -p 2022```
@@ -20,7 +22,6 @@ The volumes to mount should be:
 ```
 $ sudo apt install postgresql -y
 $ sudo sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/g" /etc/postgresql/12/main/postgresql.conf
-$ sudo service postgresql start
 $ sudo pg_ctlcluster 12 main start
 $ sudo apt install /tmp/faraday-server_amd64.deb
 $ sudo usermod -aG faraday your_username
